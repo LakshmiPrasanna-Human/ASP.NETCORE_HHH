@@ -1,0 +1,59 @@
+﻿
+Phase2
+1. test
+2. exception handling and error handling - No
+3. Version support - No
+
+phase1
+1. Add functionality of house hold business service for update, delete , Primary guardian.
+2. Depedency injection -- yes
+3. OWIN authentication and authorization - yes
+4. CORS enabling - Yes
+5. Help support using swagger - Yes
+http://localhost:5000/swagger/#/
+6. Running the application in Docker - Yes
+
+
+Business Rules and Validations:
+
+HouseHold - CRUD, 
+Address: New adrress can be added, updated, deleted and quered.
+Add New Address: when adding new address, need to check already same address exits are not then added.
+Update Address: when updating the address, need to check if already address exists.
+Delete Address: When deleting the address, check if the address exists.If exists delete the address.
+
+Person: 
+
+Add new Person: When adding Person need to check if First Name, Last Name and Middle name are matching, if not add a new Person.
+While adding Person, need to check if Address and House Hold details are there. If not there need to add them in HouseHold and Address.
+Update Person:  
+		1. Update can happen to change the FirstName, Last Name , Middle name, DOB, email and phone.
+		2. Update can happen to change Address and HouseHold details. so need to check if provided data exists, if exists need to modify.
+Delete Person: Need to delete Person Entry in Person Table.
+		
+PersonRelationship:
+
+Insertions:
+1. Only student data to be inserted into the table, which is nothing of having StudentID which is not null in Student table.
+2. Relationship type should be of type RelationShip type defined in RelationShip Type table.
+3. PersonID to be inserted.	
+4. If person and student details doesnot exist need to add them respectively and insert.
+Updations:
+1. RelationShip types can be updated for a given student id.
+2. Person details , address , house hold details can be updated.
+
+Delete: 
+1. Delete the Person Relation ship entry.
+
+Operation exposed in WebAPI:
+
+Create HouseHold , update and delete HouseHold. HouseHold should hold 
+
+HouseHold address details with Primary gurdian data and there family memebers details each with Relationships defined.
+{
+  FirstName, LastName, MiddleName, DOB, Email , phone of student
+  FirstName, LastName, MiddleName, DOB, Email , phone, Primary gurdian, Relationship type with Student - basic details of each of the family.
+  Address
+
+}
+

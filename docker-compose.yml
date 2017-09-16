@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hhh.webapi:
+    image: hhh.webapi
+    build:
+      context: ./HHH.WebAPI
+      dockerfile: Dockerfile

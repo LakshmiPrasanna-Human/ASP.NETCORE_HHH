@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\Architecture\DotNetCore\HouseHoldHub\Output\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="HHH.BusinessEntities">
+      <HintPath>..\Output\netcoreapp2.0\netcoreapp2.0\HHH.BusinessEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="HHH.DataModel">
+      <HintPath>..\Output\netcoreapp2.0\HHH.DataModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
